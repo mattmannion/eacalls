@@ -1,0 +1,91 @@
+{
+  "name": "music-site",
+  "version": "2.0.0",
+  "description": "music site for portfolio",
+  "main": "src/html/index.html",
+  "scripts": {
+    "hs": "http-server dist/ -g",
+    "rf:d": "rimraf dist/*",
+    "rf:c": "rimraf .cache/*",
+    "clear": "clear",
+    "parcel:d": "parcel src/html/index.html",
+    "parcel:p": "parcel build src/html/index.html --no-source-maps",
+    "extras": "cp src/html/_redirects dist/_redirects && cp src/html/sitemap.xml dist/sitemap.xml && cp src/html/robots.txt dist/robots.txt",
+    "nord": "cp src/html/sitemap.xml dist/sitemap.xml && cp src/html/robots.txt dist/robots.txt",
+    "gzip:js": "gzip dist/*.js && rm -rf dist/*.js && rm -rf dist/**/*.js ",
+    "gzip:css": "gzip dist/*.css && rm -rf dist/*.css && rm -rf dist/**/*.css ",
+    "gzip:html": "gzip dist/*.html && gzip dist/**/*.html && rm -rf dist/*.html && rm -rf dist/**/*.html ",
+    "gzip:all": "run-p gzip:js gzip:css gzip:html",
+    "start": "run-s rf:d clear parcel:d",
+    "tb": "run-s rf:d rf:c clear parcel:p extras gzip:all hs",
+    "build": "run-s rf:d rf:c parcel:p nord",
+    "tsinit": "touch tsconfig.json && npm i -D typescript @types/react @types/react-dom @types/react-router-dom",
+    "tsUN": "rm tsconfig.json && npm un-D typescript @types/react @types/react-dom @types/react-router-dom ",
+    "setup": "find . -name \".gitkeep\" -type f -delete && rm -rf .git && git init && npm i"
+  },
+  "author": "Matt Mannion",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@prerenderer/renderer-puppeteer": "^0.2.0",
+    "@types/loadable__component": "^5.13.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-responsive": "^8.0.2",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "9.8.6",
+    "cssnano": "^4.1.10",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-beta.1",
+    "parcel-plugin-prerender": "^1.4.1",
+    "postcss": "^8.2.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@cloudinary/base": "^1.0.0-beta.0",
+    "@loadable/component": "^5.14.1",
+    "babel-jest": "^26.6.3",
+    "cloudinary-react": "^1.6.8",
+    "core-js": "^3.9.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-responsive": "^8.2.0",
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": true
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      ">0.25%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

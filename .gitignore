@@ -1,0 +1,4 @@
+.cache
+dist
+node_modules
+music-site.code-workspace

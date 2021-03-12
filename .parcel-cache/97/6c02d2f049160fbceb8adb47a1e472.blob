@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Matt Mannion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer="" src="6ac273a7402510756324ae2678f4406a"></script>
+    <link rel="stylesheet" href="1685e1a9fd1ee757c1264d98a3669f8d">
+    <link rel="icon" href="60da3b294758431394b18081a9010e87">
+    <title>EA Calls</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
