@@ -1,6 +1,8 @@
-const app = () => (
+import { VFC } from 'react';
+
+const app: VFC = () => (
   <>
-    <div>it works</div>
+    <div></div>
   </>
 );
 
