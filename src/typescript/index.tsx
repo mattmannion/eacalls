@@ -7,11 +7,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // component imports
 import App from './app';
 import Header from './static/header';
+import InputTable from './static/InputTable';
 
 render(
   <>
     <Router>
       <Header />
+      <InputTable />
       <Switch>
         <Route exact path='/' component={App} />
       </Switch>

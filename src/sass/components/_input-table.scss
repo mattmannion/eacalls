@@ -1,0 +1,70 @@
+[class^='input-table__'] {
+  padding: 0.2rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.input-table {
+  @include centerFlex;
+  flex-flow: column;
+  padding: 1rem;
+
+  input,
+  textarea,
+  select,
+  option {
+    min-width: 30%;
+    transition: all 0.25s;
+    border: 1px solid $black;
+    border-radius: 0.5rem;
+
+    &:hover {
+      outline: none;
+      box-shadow: 0px 0px 1rem 0.1rem rgba($black, 0.5);
+    }
+  }
+
+  &__notice {
+    font-size: 1.2rem;
+  }
+
+  &__reason {
+    @include centerFlex;
+    flex-flow: column;
+
+    label {
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid black;
+    }
+
+    textarea {
+      height: 7.5rem;
+      width: 175%;
+    }
+  }
+
+  &__part {
+    @include centerFlex;
+
+    label {
+      border-bottom: 1px solid black;
+      margin-right: 1.6rem;
+    }
+
+    input {
+      transform: scale(2);
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__category {
+    label {
+      margin-right: 1rem;
+    }
+  }
+}

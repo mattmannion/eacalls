@@ -1,0 +1,18 @@
+////////////////////////////////////////
+/////////// Button Classes /////////////
+////////////////////////////////////////
+
+.btn-submit {
+  outline: none;
+  border: 1px solid $black;
+  border-radius: none;
+  padding: 0.5rem;
+
+  transition: all 0.25s;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: $black;
+  }
+}
