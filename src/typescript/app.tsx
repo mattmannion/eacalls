@@ -1,8 +1,11 @@
 import { VFC } from 'react';
+import OpenCalls from './components/OpenCalls';
 
 const app: VFC = () => (
   <>
-    <div></div>
+    <div>
+      <OpenCalls />
+    </div>
   </>
 );
 

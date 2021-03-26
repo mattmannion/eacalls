@@ -3,6 +3,9 @@
 ////////////////////////////////////////
 
 .btn-submit {
+  font-weight: 700;
+  color: $white;
+  background-color: $accent-pri;
   outline: none;
   border: 1px solid $black;
   border-radius: none;
@@ -12,7 +15,7 @@
 
   &:hover,
   &:active {
-    color: $white;
-    background-color: $black;
+    color: $black;
+    background-color: $accent-sec;
   }
 }

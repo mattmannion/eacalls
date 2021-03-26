@@ -5,8 +5,8 @@
     transition: all 0.33s;
 
     &:hover {
-      color: white;
-      background-color: black;
+      color: $white;
+      background-color: $black;
     }
   }
 }
@@ -18,13 +18,13 @@ header {
   }
 
   .nav {
-    background-color: steelblue;
+    background-color: $accent-pri;
 
     @include centerFlex;
     flex-flow: wrap;
 
     &__home {
-      background-color: skyblue;
+      background-color: $accent-sec;
     }
 
     &__welcome {
